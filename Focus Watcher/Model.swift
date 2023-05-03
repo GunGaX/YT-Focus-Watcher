@@ -28,7 +28,6 @@ class Model {
             }
             
             // Parsing the data
-            
         }
         
         // Kick off the task
