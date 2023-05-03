@@ -13,6 +13,9 @@
 		B649C8FF2A02D1940090666B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B649C8FD2A02D1940090666B /* Main.storyboard */; };
 		B649C9012A02D1960090666B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B649C9002A02D1960090666B /* Assets.xcassets */; };
 		B649C9042A02D1960090666B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B649C9022A02D1960090666B /* LaunchScreen.storyboard */; };
+		B649C90C2A02DE7E0090666B /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = B649C90B2A02DE7E0090666B /* Constants.swift */; };
+		B649C90E2A02E02E0090666B /* Video.swift in Sources */ = {isa = PBXBuildFile; fileRef = B649C90D2A02E02E0090666B /* Video.swift */; };
+		B649C9102A02E06E0090666B /* Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = B649C90F2A02E06E0090666B /* Model.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +27,9 @@
 		B649C9002A02D1960090666B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		B649C9032A02D1960090666B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		B649C9052A02D1960090666B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B649C90B2A02DE7E0090666B /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		B649C90D2A02E02E0090666B /* Video.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Video.swift; sourceTree = "<group>"; };
+		B649C90F2A02E06E0090666B /* Model.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Model.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -59,6 +65,9 @@
 				B649C8F72A02D1940090666B /* AppDelegate.swift */,
 				B649C8F92A02D1940090666B /* SceneDelegate.swift */,
 				B649C8FB2A02D1940090666B /* ViewController.swift */,
+				B649C90B2A02DE7E0090666B /* Constants.swift */,
+				B649C90D2A02E02E0090666B /* Video.swift */,
+				B649C90F2A02E06E0090666B /* Model.swift */,
 				B649C8FD2A02D1940090666B /* Main.storyboard */,
 				B649C9002A02D1960090666B /* Assets.xcassets */,
 				B649C9022A02D1960090666B /* LaunchScreen.storyboard */,
@@ -141,6 +150,9 @@
 				B649C8FC2A02D1940090666B /* ViewController.swift in Sources */,
 				B649C8F82A02D1940090666B /* AppDelegate.swift in Sources */,
 				B649C8FA2A02D1940090666B /* SceneDelegate.swift in Sources */,
+				B649C9102A02E06E0090666B /* Model.swift in Sources */,
+				B649C90C2A02DE7E0090666B /* Constants.swift in Sources */,
+				B649C90E2A02E02E0090666B /* Video.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
