@@ -7,7 +7,15 @@
 
 import Foundation
 
+protocol ModelDelegate {
+    
+    func videosFetched(_ videos: [Video])
+}
+
 class Model {
+    
+    var delegate: ModelDelegate?
+    
     func getVideos() {
         
         // Create a URL object
@@ -35,7 +43,15 @@ class Model {
                 
                 let response = try decoder.decode(Response.self, from: data!)
                 
-                dump(response)
+                if response.items != nil {
+                    
+                    DispatchQueue.main.async {
+                        
+                        self.delegate?.videosFetched(response.items!)
+                    }
+                }
+                
+//                dump(response)
             }
             catch {
                 print("An error has occurred while parsing data")
