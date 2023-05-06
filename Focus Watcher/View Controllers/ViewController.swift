@@ -42,20 +42,19 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
-        let cell = tableView.dequeueReusableCell(withIdentifier: Constants.VideoCellId, for: indexPath)
+        let cell = tableView.dequeueReusableCell(withIdentifier: Constants.VideoCellId, for: indexPath) as! VideoTableViewCell
+        
         
         // Configure the cell with data
+        let video = self.videos[indexPath.row]
         
-        
-        let title = self.videos[indexPath.row].title
-        
-        cell.textLabel?.text = title
-        
+        cell.setCell(video)
         
         return cell
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        
         return videos.count
     }
 
