@@ -64,7 +64,7 @@
                                             </constraints>
                                         </tableViewCellContentView>
                                         <connections>
-                                            <outlet property="dateLabel" destination="Nzz-Dg-h4k" id="lUG-KU-hxS"/>
+                                            <outlet property="ChannelTitleLabel" destination="Nzz-Dg-h4k" id="4e3-fo-lfT"/>
                                             <outlet property="thumbnailImageView" destination="sOG-m7-JGL" id="Pz9-2I-uff"/>
                                             <outlet property="titleLabel" destination="pdK-ug-whu" id="cfm-h0-OKO"/>
                                         </connections>

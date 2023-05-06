@@ -13,7 +13,7 @@ class VideoTableViewCell: UITableViewCell {
     
     @IBOutlet weak var titleLabel: UILabel!
     
-    @IBOutlet weak var dateLabel: UILabel!
+    @IBOutlet weak var ChannelTitleLabel: UILabel!
     
     var video: Video?
     
@@ -41,11 +41,8 @@ class VideoTableViewCell: UITableViewCell {
         // Set the title
         self.titleLabel.text = video?.title
         
-        // Set the date
-        let df = DateFormatter()
-        df.dateFormat = "MMM d, yyyy"
-        
-        self.dateLabel.text = df.string(from: video!.published)
+        // Set the chanel title
+        self.ChannelTitleLabel.text = video?.chanelTitle
         
         // Set the thumbnail
         guard self.video?.thumbnail != "" else {
