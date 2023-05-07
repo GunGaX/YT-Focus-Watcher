@@ -19,6 +19,7 @@
 		B6B2C42D2A06CFA000945C26 /* CacheManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6B2C42C2A06CFA000945C26 /* CacheManager.swift */; };
 		B6BA02D22A06C39300421989 /* VideoTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6BA02D12A06C39300421989 /* VideoTableViewCell.swift */; };
 		B6D26CB92A04049200E3E470 /* Response.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6D26CB82A04049200E3E470 /* Response.swift */; };
+		B6F2A8C22A081B2C00D7678A /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6F2A8C12A081B2C00D7678A /* DetailViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -36,6 +37,7 @@
 		B6B2C42C2A06CFA000945C26 /* CacheManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CacheManager.swift; sourceTree = "<group>"; };
 		B6BA02D12A06C39300421989 /* VideoTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoTableViewCell.swift; sourceTree = "<group>"; };
 		B6D26CB82A04049200E3E470 /* Response.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Response.swift; sourceTree = "<group>"; };
+		B6F2A8C12A081B2C00D7678A /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -84,6 +86,7 @@
 		B6BA02D42A06C3B500421989 /* View Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				B6F2A8C12A081B2C00D7678A /* DetailViewController.swift */,
 				B649C8FB2A02D1940090666B /* ViewController.swift */,
 			);
 			path = "View Controllers";
@@ -203,6 +206,7 @@
 				B649C9102A02E06E0090666B /* Model.swift in Sources */,
 				B649C90C2A02DE7E0090666B /* Constants.swift in Sources */,
 				B6BA02D22A06C39300421989 /* VideoTableViewCell.swift in Sources */,
+				B6F2A8C22A081B2C00D7678A /* DetailViewController.swift in Sources */,
 				B649C90E2A02E02E0090666B /* Video.swift in Sources */,
 				B6D26CB92A04049200E3E470 /* Response.swift in Sources */,
 			);

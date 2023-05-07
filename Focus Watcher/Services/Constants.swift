@@ -17,4 +17,6 @@ struct Constants {
     
     static var VideoCellId = "VideoCell"
     
+    static var YT_Embed_URL = "https://www.youtube.com/embed/"
+    
 }
