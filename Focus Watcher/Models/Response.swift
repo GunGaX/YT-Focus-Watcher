@@ -12,7 +12,6 @@ struct Response: Decodable {
     var items: [Video]?
     
     enum CodingKeys: String, CodingKey {
-        
         case items
     }
     

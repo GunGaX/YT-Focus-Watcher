@@ -18,7 +18,9 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
+        title = "Videos"
+        
         tableView.dataSource = self
         tableView.delegate = self
         
