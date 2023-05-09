@@ -7,14 +7,17 @@
 
 import UIKit
 
-class ViewController: UIViewController, UITableViewDataSource, UITableViewDelegate, ModelDelegate {
+class ViewController: UIViewController, UITableViewDataSource, UITableViewDelegate, UISearchBarDelegate, ModelDelegate {
    
     
     @IBOutlet weak var tableView: UITableView!
     
+    @IBOutlet weak var searchBar: UISearchBar!
+    
     var model = Model()
     
     var videos = [Video]()
+    var filteredVideos: [Video]!
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -26,7 +29,11 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
         
         model.delegate = self
         
+        searchBar.delegate = self
+        
         model.getVideos()
+        
+        filteredVideos = videos
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
@@ -37,25 +44,28 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
         }
         
         // Get a reference to the video that was tapped
-        let selectedVideo = videos[tableView.indexPathForSelectedRow!.row]
+        let selectedVideo = filteredVideos[tableView.indexPathForSelectedRow!.row]
         
         let detailViewController = segue.destination as! DetailViewController
         
         detailViewController.video = selectedVideo
     }
     
-    //MARK: - Model Delegate methods
+    
+    // MARK: - Model Delegate methods
     
     func videosFetched(_ videos: [Video]) {
         
         self.videos = videos
+        
+        self.filteredVideos = videos
         
         //Refresh the tableView
         tableView.reloadData()
     }
 
     
-    //MARK: - TableView Methods
+    // MARK: - TableView Methods
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
@@ -63,7 +73,7 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
         
         
         // Configure the cell with data
-        let video = self.videos[indexPath.row]
+        let video = self.filteredVideos[indexPath.row]
         
         cell.setCell(video)
         
@@ -72,8 +82,32 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         
-        return videos.count
+        return filteredVideos.count
     }
+    
+    
+    // MARK: - Search Bar Methods
+    
+    func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
+        filteredVideos = []
+        
+        if searchText == "" {
+            filteredVideos = videos
+        } else {
+            for v in videos {
+                if v.title.lowercased().contains(searchText.lowercased()) {
+                    filteredVideos.append(v)
+                }
+            }
+        }
+        
+        
+        self.tableView.reloadData()
+    }
+    
+    func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
+            self.searchBar.endEditing(true)
+        }
 
 }
 
