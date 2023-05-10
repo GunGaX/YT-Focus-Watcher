@@ -34,6 +34,10 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
         model.getVideos()
         
         filteredVideos = videos
+        
+        // Refresh Control to reload the data
+        tableView.refreshControl = UIRefreshControl()
+        tableView.refreshControl?.addTarget(self, action: #selector(pulledToRefresh), for: .valueChanged)
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
@@ -108,6 +112,18 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
     func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
             self.searchBar.endEditing(true)
         }
+    
+    // MARK: - Reload Control Methods
+    
+    @objc func pulledToRefresh() {
+        
+        DispatchQueue.main.asyncAfter(deadline: .now() + 1) {
+            self.tableView.refreshControl?.endRefreshing()
+            
+            self.model.getVideos()
+            
+        }
+    }
 
 }
 
